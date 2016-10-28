@@ -1,4 +1,4 @@
-# Qand-a
+# Q and A
 
 A proof-of-concept application for a theoretical question and answer website. 
 
