@@ -1,1 +1,19 @@
-{{outlet}}
+<div class="container">
+  <h1>Questions</h1>
+  <hr>
+  {{#each model as |question|}}
+    <h3>"{{question.title}}"</h3>
+    <h5>- {{question.author}}</h5>
+    <p>{{question.notes}}</p>
+    <button class="btn btn-success btn-sm">Answer</button>
+    <button class="btn btn-info btn-sm">Show Answers</button>
+    <hr>
+    <h3>Answers</h3>
+    {{#each question.answers as |answer|}}
+      <ul>
+        <li><h5><b>{{answer.author}}:</b> "{{answer.text}}"</h5></li>
+      </ul>
+    {{/each}}
+    <hr>
+  {{/each}}
+</div>
