@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>"{{model.title}}"</h3>
+  <h5>- {{model.author}}</h5>
+  <p>{{model.notes}}</p>
+  <button class="btn btn-success btn-sm">Answer</button>
+  <button class="btn btn-info btn-sm">Show Answers</button>
+  <hr>
+  <h3>Answers</h3>
+  {{#each model.answers as |answer|}}
+    <ul>
+      <li><h5><b>{{answer.author}}:</b> "{{answer.text}}"</h5></li>
+    </ul>
+  {{/each}}
+</div>

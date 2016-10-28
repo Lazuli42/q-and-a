@@ -1,6 +1,24 @@
 { "questions": [{
+    "id": 1,
     "title": "How do I install Ember?",
     "author": "jsNoob",
-    "notes": "i dont know how to google"
-  }]
+    "notes": "i dont know how to google",
+    "answers": [{
+      "author": "ITguy",
+      "text": "have you tried turning it off and on again?",
+      }, {
+        "author": "jsGuru",
+        "text": "i'd link you to the documentation, but it doesn't seem to exist."
+      }
+    ]
+  }, {
+      "id": 2,
+      "title": "can dogs eat raisin????",
+      "author": "iHaveADog",
+      "notes": "please answer quickly!",
+      "answers": [{
+        "author": "dogLover43",
+        "text": "NO!! THEY CAN'T! TAKE THEM TO VET NOW!",
+        }]
+    }]
 }

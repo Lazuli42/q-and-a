@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 var questions = [{
+  id: 1,
   title: "how do i ember?",
   author: "jsNoob",
   notes: "idk how to google",
@@ -15,6 +16,14 @@ var questions = [{
 
 export default Ember.Route.extend({
   model() {
-    return questions;
+    return this.store.findAll('question');
+  },
+
+  actions: {
+    saveQuestion3(params) {
+      var newQuestion = this.store.createRecord('question', params);
+      newQuestion.save();
+      this.transitionTo('index');
+    }
   }
 });
