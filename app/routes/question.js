@@ -14,6 +14,19 @@ export default Ember.Route.extend({
         return question.save();
       });
       this.transitionTo('question', question);
+    },
+
+    raiseScore(answer) {
+      var score = answer.get('score');
+      score++;
+      answer.set('score', score);
+      answer.save();
+    },
+    lowerScore(answer) {
+      var score = answer.get('score');
+      score -= 1;
+      answer.set('score', score);
+      answer.save();
     }
   }
 });

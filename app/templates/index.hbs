@@ -4,9 +4,9 @@
 
   <hr>
   {{#each model as |question|}}
-    <h3>"{{question.title}}"</h3>
-    <h5>- {{question.author}}</h5>
-    {{#link-to 'question' question.id}}<button class="btn btn-info">Details</button>{{/link-to}}
+    <h3 class="text-center">"{{question.title}}"</h3>
+    <h5 class="text-center">- {{question.author}}</h5>
+    {{#link-to 'question' question.id}}<button class="btn btn-info center-block">Details</button>{{/link-to}}
     <hr>
   {{/each}}
 </div>

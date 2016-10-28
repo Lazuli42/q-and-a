@@ -15,8 +15,8 @@ export default Ember.Component.extend({
         notes: this.get('notes'),
         answers: []
       };
+      this.set('showQuestionForm', false);
       this.sendAction('saveQuestion2', params);
-      this.transitionTo('index');
     }
   }
 });
