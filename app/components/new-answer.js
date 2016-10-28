@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       var params = {
         author: this.get('answerAuthor'),
         text: this.get('answerText'),
+        score: 1,
         question: this.get('question')
       };
       this.set('showAnswerForm', false);
