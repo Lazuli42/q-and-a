@@ -1,6 +1,14 @@
 <div class="container">
 
-  {{edit-question editQuestion="editQuestion" question=model}}
+  <div class="row">
+    <div class="col-xs-1">
+      {{edit-question editQuestion="editQuestion" question=model}}
+    </div>
+    <div class="col-xs-1">
+      <h1><span {{action 'destroyQuestion' model}} class="glyphicon glyph-click glyphicon-trash" aria-hidden="true"></span></h1>
+     </div>
+  </div>
+
 
   <h1>"{{model.title}}"</h1>
   <h4>- {{model.author}}</h4>
@@ -21,9 +29,8 @@
 
         <b>{{answer.author}}:</b> "{{answer.text}}"
 
-        <span {{action 'deleteAnswer' answer}} class="glyphicon glyph-click glyphicon-remove" aria-hidden="true"></span>
+        <span {{action 'destroyAnswer' answer}} class="glyphicon glyph-click glyphicon-remove" aria-hidden="true"></span>
       </h5></li>
-
     </ul>
   {{/each}}
 </div>

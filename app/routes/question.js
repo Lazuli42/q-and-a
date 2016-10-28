@@ -29,8 +29,18 @@ export default Ember.Route.extend({
       question.save();
     },
 
-    deleteAnswer() {
+    destroyQuestion(question) {
+      if (confirm('Delete this question?')) {
+        question.destroyRecord();
+        this.transitionTo('index');
+      }
+    },
 
+    destroyAnswer(answer) {
+      if (confirm('Delete this answer?')) {
+        answer.destroyRecord();
+        this.transitionTo('question', question.id);
+      }
     },
 
     raiseScore(answer) {
