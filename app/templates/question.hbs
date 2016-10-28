@@ -1,10 +1,12 @@
 <div class="container">
-  <h3>"{{model.title}}"</h3>
-  <h5>- {{model.author}}</h5>
+  <h1>"{{model.title}}"</h1>
+  <h4>- {{model.author}}</h4>
   <p>{{model.notes}}</p>
-  <button class="btn btn-success btn-sm">Answer</button>
-  <button class="btn btn-info btn-sm">Show Answers</button>
+
+  {{new-answer saveAnswer="saveAnswer" question=model}}
+
   <hr>
+
   <h3>Answers</h3>
   {{#each model.answers as |answer|}}
     <ul>
