@@ -1,0 +1,15 @@
+<h3>Answers</h3>
+<ul>
+{{#each sortedAnswers as |answer|}}
+    <li><h5>
+      <b>{{answer.score}}</b>
+      <span {{action 'raiseScore' answer}} class="glyphicon glyph-click glyphicon-thumbs-up" aria-hidden="true"></span>
+
+      <span {{action 'lowerScore' answer}} class="glyphicon glyph-click glyphicon-thumbs-down" aria-hidden="true"></span>
+
+      <b>{{answer.author}}:</b> "{{answer.text}}"
+
+      <span {{action 'destroyAnswer' answer}} class="glyphicon glyph-click glyphicon-remove" aria-hidden="true"></span>
+    </h5></li>
+{{/each}}
+</ul>

@@ -18,19 +18,6 @@
 
   <hr>
 
-  <h3>Answers</h3>
-  {{#each model.answers as |answer|}}
-    <ul>
-      <li><h5>
-        <b>{{answer.score}}</b>
-        <span {{action 'raiseScore' answer}} class="glyphicon glyph-click glyphicon-thumbs-up" aria-hidden="true"></span>
+  {{question-answers question=model}}
 
-        <span {{action 'lowerScore' answer}} class="glyphicon glyph-click glyphicon-thumbs-down" aria-hidden="true"></span>
-
-        <b>{{answer.author}}:</b> "{{answer.text}}"
-
-        <span {{action 'destroyAnswer' answer}} class="glyphicon glyph-click glyphicon-remove" aria-hidden="true"></span>
-      </h5></li>
-    </ul>
-  {{/each}}
 </div>

@@ -5,6 +5,8 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
 
+
+
   actions: {
       showEditForm() {
         this.send('showEditForm');
@@ -42,18 +44,5 @@ export default Ember.Route.extend({
         this.transitionTo('question', question.id);
       }
     },
-
-    raiseScore(answer) {
-      var score = answer.get('score');
-      score++;
-      answer.set('score', score);
-      answer.save();
-    },
-    lowerScore(answer) {
-      var score = answer.get('score');
-      score -= 1;
-      answer.set('score', score);
-      answer.save();
-    }
   }
 });
