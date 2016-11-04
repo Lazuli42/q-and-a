@@ -37,12 +37,5 @@ export default Ember.Route.extend({
         this.transitionTo('index');
       }
     },
-
-    destroyAnswer(answer) {
-      if (confirm('Delete this answer?')) {
-        answer.destroyRecord();
-        this.transitionTo('question', question.id);
-      }
-    },
   }
 });

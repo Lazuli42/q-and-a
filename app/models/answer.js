@@ -4,5 +4,6 @@ export default DS.Model.extend({
   author: DS.attr(),
   text: DS.attr(),
   score: DS.attr(),
+  timestamp: DS.attr(),
   question: DS.belongsTo('question', { async: true })
 });

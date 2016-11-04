@@ -11,11 +11,18 @@ export default Ember.Component.extend({
       answer.set('score', score);
       answer.save();
     },
+
     lowerScore(answer) {
       var score = answer.get('score');
       score -= 1;
       answer.set('score', score);
       answer.save();
-    }
+    },
+
+    destroyAnswer(answer) {
+      if (confirm('Delete this answer?')) {
+        answer.destroyRecord();
+      }
+    },
   }
 });
