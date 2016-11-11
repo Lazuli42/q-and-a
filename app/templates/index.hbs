@@ -4,9 +4,12 @@
 
   <hr>
   {{#each model as |question|}}
-    <h3 class="text-center">"{{question.title}}"</h3>
-    <h5 class="text-center">- {{question.author}}</h5>
+  <div class="text-center">
+    <h3>"{{question.title}}"</h3>
+    <h5>- {{question.author}}</h5>
+    <h5><span class="redText">{{popular question}}</span> {{question.answers.length}} answers</h5>
     {{#link-to 'question' question.id}}<button class="btn btn-info center-block">Details</button>{{/link-to}}
+  </div>
     <hr>
   {{/each}}
 </div>
