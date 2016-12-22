@@ -8,8 +8,22 @@
     <h3>"{{question.title}}"</h3>
     <h5>- {{question.author}}</h5>
     <h5><span class="redText">{{popular question}}</span> {{question.answers.length}} answers</h5>
-    {{#link-to 'question' question.id}}<button class="btn btn-info center-block">Details</button>{{/link-to}}
+
+    <div class="row">
+      <div class="col-xs-6">
+        <button {{action 'followPost' question}} class="btn btn-success center-block pull-right">Follow this Post</button>
+      </div>
+      <div class="col-xs-6">
+        {{#link-to 'question' question.id}}
+        <button class="btn btn-info center-block pull-left">Details</button>
+        {{/link-to}}
+      </div>
+    </div>
+
   </div>
-    <hr>
+  <hr>
   {{/each}}
+
+  {{display-follows}}
+
 </div>

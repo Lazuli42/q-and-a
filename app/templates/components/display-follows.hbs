@@ -1,0 +1,8 @@
+<div class="text-center">
+  <h3>Followed Posts</h3>
+  {{#each followedPosts.posts as |post|}}
+  {{#link-to 'question' post.id}}
+  <p>{{post.title}}</p>
+  {{/link-to}}
+  {{/each}}
+</div>

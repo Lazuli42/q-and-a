@@ -25,3 +25,7 @@
 .redText {
   color: red;
 }
+
+.btn-group {
+  display: inline-block;
+}
