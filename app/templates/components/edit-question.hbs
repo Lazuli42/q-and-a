@@ -8,12 +8,12 @@
       {{input class="form-control" value=questionAuthor id="questionAuthor" placeholder=question.author}}
 
       <label for="notes">Edit Additional Info</label>
-      {{textarea class="form-control" value=notes id="notes" placeholder=question.notes}}
+      {{textarea cols="50" class="form-control" value=notes id="notes" placeholder=question.notes}}
     </div>
 
     <button {{action 'editQuestion' question}} class="btn btn-success" type="submit">Update</button>
   </form>
 <br>
 {{else}}
-  <h1><span {{action 'showEditForm'}} class="glyphicon glyph-click glyphicon-edit" aria-hidden="true"></span></h1>
+  <h1><span {{action 'showEditForm'}} class="pull-right glyphicon glyph-click glyphicon-edit" aria-hidden="true"></span></h1>
 {{/if}}
